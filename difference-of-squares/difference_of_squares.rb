@@ -4,11 +4,11 @@ class Squares
   end
 
   def square_of_sum
-    ((@n/2.0 * (@n+1))**2).ceil
+    ((@n + 1) * @n / 2)**2
   end
 
   def sum_of_squares
-    (1/3.0 * @n**3 + 0.5 * @n**2 + 1/6.0 * @n).ceil
+    (@n * (@n + 1) * (2 * @n + 1)) / 6
   end
 
   def difference
