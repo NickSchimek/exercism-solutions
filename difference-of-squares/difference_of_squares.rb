@@ -1,8 +1,8 @@
 class Squares
   attr_reader :n
 
-  def initialize number
-    @n = number
+  def initialize integer
+    @n = integer
   end
 
   def square_of_sum
