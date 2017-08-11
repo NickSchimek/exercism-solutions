@@ -1,14 +1,15 @@
 class Squares
-  def initialize n
-    @n = n
+  attr_reader :n
+  def initialize number
+    @n = number
   end
 
   def square_of_sum
-    ((@n + 1) * @n / 2)**2
+    ((n + 1) * n / 2)**2
   end
 
   def sum_of_squares
-    (@n * (@n + 1) * (2 * @n + 1)) / 6
+    (n * (n + 1) * (2 * n + 1)) / 6
   end
 
   def difference
