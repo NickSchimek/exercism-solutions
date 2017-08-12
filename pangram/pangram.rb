@@ -1,7 +1,17 @@
 class Pangram
-  def self.pangram? s
-    26 == s.downcase.each_char.map { |char| char if (char>="a") && (char<="z") }.reject {  |e| e.to_s.empty? }.uniq.length
+  ALPHABET_LENGTH = 26
+  def self.pangram? phrase
+    ALPHABET_LENGTH == phrase.downcase.each_char.map { |char| check_char char }.reject {  |e| e.to_s.empty? }.uniq.length
   end
+
+  def self.check_char char
+    if (char>="a") && (char<="z")
+      char
+    else
+      nil
+    end
+  end
+
 end
 
 module BookKeeping
