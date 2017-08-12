@@ -5,11 +5,7 @@ class Pangram
   end
 
   def self.check_char char
-    if (char>="a") && (char<="z")
-      char
-    else
-      nil
-    end
+    (char>="a") && (char<="z") ? char : nil
   end
 
 end
