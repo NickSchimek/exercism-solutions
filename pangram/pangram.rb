@@ -1,13 +1,8 @@
 class Pangram
-  ALPHABET_LENGTH = 26
   def self.pangram? phrase
-    ALPHABET_LENGTH == phrase.downcase.each_char.map { |char| check_char char }.reject {  |e| e.to_s.empty? }.uniq.length
+    phrase.downcase!
+    ("a".."z").all? { |char| phrase.count(char) >= 1 }
   end
-
-  def self.check_char char
-    (char>="a") && (char<="z") ? char : nil
-  end
-
 end
 
 module BookKeeping
