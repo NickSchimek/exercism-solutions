@@ -1,7 +1,6 @@
 class Hamming
   def self.compute strand1, strand2
-    strand_length = strand1.length
-    raise ArgumentError, "Inconsistent lengths" if strand_length != strand2.length
+    raise ArgumentError, "Inconsistent lengths" if strand1.length != strand2.length
     hamming_distance = pair_up(strand1, strand2).count { |pair| pair.first != pair.last }
   end
 
