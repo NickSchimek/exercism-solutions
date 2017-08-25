@@ -1,7 +1,7 @@
 class Pangram
   def self.pangram? phrase
-    phrase.downcase!
-    ("a".."z").all? { |char| phrase.include?(char) }
+    str = phrase.downcase
+    ("a".."z").all? { |char| str.include?(char) }
   end
 end
 
